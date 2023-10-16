@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% block title %}Blog.in {% endblock title %}
+{% block style %} 
+ 
+ .imgindex{
+   background-image: url('/static/background.jpg');
+   background-size: cover;
+   height: 15cm;
+   width: 35.7cm;
+   margin: 15xm;
+
+ }
+ .inimg{
+  height: 5cm;
+  width: 5cm;
+  
+  padding: 150px;
+  background: rgba( 255, 255, 255, 0.45 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 0.0px );
+  -webkit-backdrop-filter: blur( 0.0px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  
+
+  
+ }
+
+
+ {% endblock style %}
+ {% block body %}
+ 
+
+
+<div class ="imgindex">
+
+  
+
+</div>
+<br><br>
+
+<div class=" container">
+<center>
+  <h2>blogs</h2>
+
+</center> 
+ <div class="row">
+   <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary">World</strong>
+          <h3 class="mb-0">Featured post</h3>
+          <div class="mb-1 text-muted">Nov 12</div>
+          <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <form action="/blog" >
+            <input type="submit" class="btn btn-primary" value="Read">
+          </form>
+          
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <svg class="bd-placeholder-img" width="200" height="250" xmlns="/static/123.png" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+
+        </div>
+      </div>
+      </div>
+
+
+
+
+      <div class="col-md-6">
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary">World</strong>
+          <h3 class="mb-0">Featured post</h3>
+          <div class="mb-1 text-muted">Nov 12</div>
+          <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+          <form action="/blog" >
+            <input type="submit" class="btn btn-primary" value="Read">
+          </form>
+         
+         
+        </div>
+        <div class="col-auto d-none d-lg-block">
+          <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+
+        </div>
+      </div>
+      </div>
+  </div>
+</div>
+ 
+ {% endblock body %}
+
+
+ 

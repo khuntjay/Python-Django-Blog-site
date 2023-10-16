@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block homeactive %}active{% endblock homeactive %}
+
+{% block title %}Home {% endblock title %}
+ {% block style %} 
+ 
+ body{
+   background-image: url('/static/background.jpg');
+   background-size: cover;
+
+ }
+ .jay123{
+  
+  background: rgba( 255, 255, 255, 0.60 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 1.5px );
+  -webkit-backdrop-filter: blur( 1.5px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  
+ }
+ h2{
+   font-family: 'Kiwi Maru', serif;
+   color:pink;
+   font-size: 30px;
+ }
+ {% endblock style %}
+ {% block body %}
+ <div class=" container">
+ 
+
+
+
+<center>
+<div class=" container my-3 ">
+ <h2>Blogs</h2>
+ {% for blog in allblog %}
+ <div class=" my-3">
+   <div class="col-md-6">
+      <div class="jay123 row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <strong class="d-inline-block mb-2 text-primary">World</strong>
+          <h3 class="mb-0">{{blog.title}}</h3>
+          <div class="mb-1 text-muted">{{blog.date}}</div>
+          <p class="card-text mb-auto">{{blog.content | truncatechars:200}}</p>
+          <a href="/{{blog.slug}}" class="btn btn-primary my-3">Continue reading</a>
+         </div>
+         
+      </div>
+
+      
+      
+
+
+
+
+      
+</div>
+<center>
+ {% endfor %}
+ {% endblock body %}
+
+
+ 
